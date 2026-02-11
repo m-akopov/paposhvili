@@ -460,53 +460,90 @@ body {
 }
 
 /* ============================================
-   Timeline (Work Experience) - Compact
+   Experience List (Work Experience) - Two Column
    ============================================ */
 
-.timeline {
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.experience-item {
+    display: flex;
+    gap: 0;
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
     position: relative;
-    padding-left: var(--spacing-md);
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--border-color);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: var(--spacing-lg);
-    padding-left: var(--spacing-lg);
-}
-
-.timeline-marker {
-    position: absolute;
-    left: -5px;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px var(--primary-color);
-}
-
-.timeline-content {
-    background: white;
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
     transition: var(--transition);
+    padding: var(--spacing-md);
+    margin-left: calc(-1 * var(--spacing-md));
+    margin-right: calc(-1 * var(--spacing-md));
+    border-radius: var(--border-radius);
 }
 
-.timeline-content:hover {
-    border-color: var(--primary-light);
+.experience-item:hover {
+    background: var(--bg-alt);
     box-shadow: var(--shadow-sm);
+}
+
+
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding-left: var(--spacing-sm);
+        margin-left: calc(-1 * var(--spacing-sm));
+    }
+    
+    .experience-item::before {
+        display: none;
+    }
+}
+
+.experience-date-column {
+    flex: 0 0 180px;
+    text-align: right;
+    padding-top: var(--spacing-xs);
+    padding-right: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .experience-date-column {
+        flex: none;
+        text-align: left;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: var(--spacing-sm);
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .experience-date-column::after {
+        display: none;
+    }
+}
+
+.experience-period {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.experience-duration {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.experience-content-column {
+    flex: 1;
+    padding-left: var(--spacing-lg);
 }
 
 .job-header {
@@ -538,21 +575,11 @@ body {
     font-weight: 500;
 }
 
-.job-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-}
-
-.job-date {
-    font-weight: 600;
-}
-
 .job-location {
     color: var(--text-light);
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
 }
 
 .job-context {
