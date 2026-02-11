@@ -17,13 +17,12 @@
         <div class="container">
             <div class="tabs-menu">
                 <button class="tab-btn active" data-tab="about">About</button>
-                <button class="tab-btn" data-tab="experience">Experience</button>
+                <button class="tab-btn" data-tab="experience">Work Experience</button>
                 <button class="tab-btn" data-tab="education">Education</button>
-                <button class="tab-btn" data-tab="certifications">Certifications</button>
-                <button class="tab-btn" data-tab="fellowships">Fellowships</button>
-                <button class="tab-btn" data-tab="honors">Honors</button>
-                <button class="tab-btn" data-tab="publications">Publications</button>
-                <button class="tab-btn" data-tab="policy-papers">Policy Papers</button>
+                <button class="tab-btn" data-tab="publications">Publications / Policy Papers</button>
+                <button class="tab-btn" data-tab="teaching">Teaching / Speaking</button>
+                <button class="tab-btn" data-tab="trainings">Trainings</button>
+                <button class="tab-btn" data-tab="projects">Projects</button>
             </div>
         </div>
     </nav>
@@ -31,27 +30,38 @@
     <main class="main-content">
         <!-- About Section -->
         <section id="about" class="tab-content active">
+            <div class="about-cover-container">
+                <img src="images/cover-us-eu-flags.jpeg" alt="Cover" class="about-cover-image">
+            </div>
             <div class="container">
                 <div class="about-content">
-                    <div class="about-top">
+                    <div class="about-layout">
                         <div class="photo-container">
                             <img src="images/photo.jpeg" alt="Mariami Paposhvili" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="photo-placeholder" style="display: none;">
                                 <span>MP</span>
                             </div>
                         </div>
-                        <div class="about-info">
-                            <h1 class="hero-name">Mariami Paposhvili</h1>
-                            <p class="hero-title">Policy Expert & Researcher</p>
-                            <p class="hero-subtitle">International Development, Social Policy, Eastern Partnership Relations</p>
-                            <div class="hero-links">
-                                <a href="https://www.linkedin.com/in/mariami-p-04703041/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        <div class="about-info-column">
+                            <div class="about-info">
+                                <h1 class="hero-name">Mariami Paposhvili</h1>
+                                <p class="hero-title">Social Policy Expert | Human Capital, Social Protection, Employment Policy, Governance</p>
+                            </div>
+                            <div class="about-text">
+                                <p>Mariami Paposhvili is a policy practitioner and researcher with over ten years of experience advancing social and economic equity through labour and social policy reform. Currently based at Expertise France in Tbilisi, working on Human Capital Development with a focus on employment, labour rights, disability inclusion, social-services delivery, and cybersecurity policy reforms.</p>
+                                <p>She holds an MA in International Policy from Texas A&M University (USA) and an MA in European Interdisciplinary Studies from the College of Europe (Poland).</p>
+                            </div>
+                            <div class="about-contact-links">
+                                <a href="https://www.linkedin.com/in/mariami-p-04703041/" target="_blank" rel="noopener noreferrer" class="contact-link linkedin-link">
+                                    <span class="contact-icon">in</span>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="mailto:mariami.paposhvili@coleurope.eu" class="contact-link email-link">
+                                    <span class="contact-icon">✉</span>
+                                    <span>Email</span>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="about-text">
-                        <p>Mariami Paposhvili is a policy expert and researcher specializing in international development, social policy, and Eastern Partnership relations. With extensive experience in project management, research, and policy analysis, she has worked with leading international organizations including Expertise France, Open Society Foundations, and the European Parliament.</p>
-                        <p>Her work focuses on social justice, decent work policies, democratic resilience, and human rights across the Eastern Partnership region. She holds a Master's in International Policy from Texas A&M University and a Master's in European Interdisciplinary Studies from the College of Europe.</p>
                     </div>
                 </div>
             </div>
@@ -120,25 +130,6 @@
                                 <li>Develop and design survey instruments in collaboration with consultants for civil society feedback</li>
                                 <li>Conduct consultations and interviews with key stakeholders from the EaP countries</li>
                                 <li>Collaborate with EaP CSF Secretariat to gather data through surveys and interviews to inform policy recommendations</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="job-header">
-                                <h3 class="job-title">Guest Lecturer</h3>
-                                <span class="job-company">Ivane Javakhishvili Tbilisi State University</span>
-                                <span class="job-type">Part-time</span>
-                            </div>
-                            <div class="job-meta">
-                                <span class="job-date">Sep 2021 - Aug 2023 · 2 yrs</span>
-                            </div>
-                            <ul class="job-description">
-                                <li>Teaching course Research Design in International Relations at BA level students</li>
-                                <li>Design, develop, and deliver material using a range of methods and platforms</li>
-                                <li>Set and grade assignments, tests and exams; Perform plagiarism checks; Give feedback</li>
                             </ul>
                         </div>
                     </article>
@@ -392,10 +383,49 @@
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications" class="tab-content">
+        <!-- Teaching / Speaking Section -->
+        <section id="teaching" class="tab-content">
             <div class="container">
-                <h2 class="section-title">Certifications & Licenses</h2>
+                <h2 class="section-title">Teaching / Speaking</h2>
+                <div class="teaching-list">
+                    
+                    <article class="teaching-card">
+                        <div class="teaching-header">
+                            <h3 class="teaching-title">Guest Lecturer</h3>
+                            <span class="teaching-org">Ivane Javakhishvili Tbilisi State University</span>
+                        </div>
+                        <div class="teaching-meta">
+                            <span class="teaching-date">Sep 2021 - Aug 2023 · 2 yrs</span>
+                            <span class="teaching-type">Part-time</span>
+                        </div>
+                        <ul class="teaching-description">
+                            <li>Teaching course Research Design in International Relations at BA level students</li>
+                            <li>Design, develop, and deliver material using a range of methods and platforms</li>
+                            <li>Set and grade assignments, tests and exams; Perform plagiarism checks; Give feedback</li>
+                        </ul>
+                    </article>
+
+                    <article class="teaching-card">
+                        <div class="teaching-header">
+                            <h3 class="teaching-title">Speaker, Georgia Global Perspective E-Residency</h3>
+                            <span class="teaching-org">The George Washington University</span>
+                        </div>
+                        <div class="teaching-meta">
+                            <span class="teaching-date">May 2020</span>
+                        </div>
+                        <p class="teaching-description">Skills: University Lecturing · Public Speaking</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainings Section -->
+        <section id="trainings" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Trainings</h2>
+                
+                <h3 class="subsection-title">Certifications</h3>
                 <div class="certifications-grid">
                     
                     <article class="cert-card">
@@ -458,13 +488,8 @@
                     </article>
 
                 </div>
-            </div>
-        </section>
 
-        <!-- Fellowships Section -->
-        <section id="fellowships" class="tab-content">
-            <div class="container">
-                <h2 class="section-title">Fellowships</h2>
+                <h3 class="subsection-title">Fellowships</h3>
                 <div class="fellowships-list">
                     
                     <article class="fellowship-card">
@@ -492,13 +517,8 @@
                     </article>
 
                 </div>
-            </div>
-        </section>
 
-        <!-- Honors & Awards Section -->
-        <section id="honors" class="tab-content">
-            <div class="container">
-                <h2 class="section-title">Honors & Awards</h2>
+                <h3 class="subsection-title">Honors & Awards</h3>
                 <div class="honors-list">
                     
                     <article class="honor-card">
@@ -528,10 +548,12 @@
             </div>
         </section>
 
-        <!-- Policy Papers Section -->
-        <section id="policy-papers" class="tab-content">
+        <!-- Publications / Policy Papers Section -->
+        <section id="publications" class="tab-content">
             <div class="container">
-                <h2 class="section-title">Policy Papers</h2>
+                <h2 class="section-title">Publications / Policy Papers</h2>
+                
+                <h3 class="subsection-title">Policy Papers</h3>
                 <div class="papers-list">
                     
                     <article class="paper-item">
@@ -556,13 +578,8 @@
                     </article>
 
                 </div>
-            </div>
-        </section>
 
-        <!-- Publications Section -->
-        <section id="publications" class="tab-content">
-            <div class="container">
-                <h2 class="section-title">Publications</h2>
+                <h3 class="subsection-title">Publications</h3>
                 <div class="publications-list">
                     
                     <article class="publication-item">
@@ -644,21 +661,19 @@
             </div>
         </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/mariami-p-04703041/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-                    <span class="footer-separator">|</span>
-                    <a href="mailto:contact@example.com" class="footer-link">Email</a>
+        <!-- Projects Section -->
+        <section id="projects" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-placeholder">
+                        <p>Projects section - content to be added</p>
+                    </div>
                 </div>
-                <p class="footer-copyright">&copy; 2025 Mariami Paposhvili. All rights reserved.</p>
             </div>
-        </div>
-    </footer>
+        </section>
+
+    </main>
 
     <script>
         // Tab functionality
