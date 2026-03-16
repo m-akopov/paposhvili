@@ -368,6 +368,22 @@ body {
 }
 
 /* ============================================
+   SEO - Visually hidden but accessible to screen readers
+   ============================================ */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ============================================
    Tab Navigation
    ============================================ */
 
@@ -399,6 +415,8 @@ body {
     cursor: pointer;
     transition: var(--transition);
     font-family: var(--font-primary);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .tab-btn:hover {
@@ -1412,6 +1430,80 @@ body {
     gap: var(--spacing-xl);
 }
 
+.teaching-speaking-photos-row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.teaching-speaking-photo-item {
+    flex: 1;
+    min-width: 180px;
+    height: 200px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--bg-alt);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teaching-speaking-photo-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.25), 0 4px 12px -4px rgba(30, 64, 175, 0.15);
+}
+
+.teaching-speaking-photo-item:hover img {
+    filter: brightness(0.85);
+}
+
+.teaching-speaking-photo-item:hover .training-zoom-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.teaching-speaking-photo-item .training-zoom-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.teaching-speaking-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.teaching-speaking-photo-item .teaching-speaking-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-alt);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .teaching-speaking-photos-row {
+        flex-direction: row;
+        gap: var(--spacing-md);
+    }
+    
+    .teaching-speaking-photo-item {
+        min-width: 120px;
+        flex: 1 1 calc(33.333% - var(--spacing-md));
+        height: 160px;
+    }
+}
+
 .teaching-section,
 .speaking-section {
     display: flex;
@@ -1473,6 +1565,16 @@ body {
     box-shadow: var(--shadow-sm);
 }
 
+.teaching-details-column {
+    flex: 0 0 320px;
+    min-width: 0;
+}
+
+.teaching-modules-column {
+    flex: 1;
+    min-width: 0;
+}
+
 .teaching-speaking-content {
     flex: 6 1 0;
     min-width: 0;
@@ -1523,6 +1625,15 @@ body {
 @media (max-width: 768px) {
     .teaching-speaking-item {
         flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .teaching-details-column {
+        flex: none;
+    }
+    
+    .teaching-modules-column {
+        flex: none;
     }
     
     .teaching-speaking-item .teaching-speaking-image {
